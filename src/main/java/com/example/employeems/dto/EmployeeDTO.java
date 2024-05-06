@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 public class EmployeeDTO {
 
 
-    public class Employee {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int emID;
@@ -25,4 +24,4 @@ public class EmployeeDTO {
 
     }
 
-}
+
