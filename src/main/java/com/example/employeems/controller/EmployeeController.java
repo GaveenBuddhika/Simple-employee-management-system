@@ -114,7 +114,6 @@ public class EmployeeController {
 
     @GetMapping("/searchEmployee/{emID}")
     public ResponseEntity searchEmployee(@PathVariable int emID){
-
         try {
             EmployeeDTO employeeDTO = employeeService.searchEmployee(emID);
             if (employeeDTO !=null) {
@@ -134,9 +133,31 @@ public class EmployeeController {
             responseDTO.setContent(e);
             return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
-
-
-
     }
+
+
+    @DeleteMapping("/deleteEmployee/{emID}")
+    public ResponseEntity deleteEmployee(@PathVariable int emID){
+        try {
+            String res = employeeService.deleteEmployee(emID);
+            if (res.equals("00")) {
+                responseDTO.setCode(VarList.RSP_SUCCESS);
+                responseDTO.setMessage("Success");
+                responseDTO.setContent(null);
+                return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+            } else {
+                responseDTO.setCode(VarList.RSP_NO_DATA_FOUND);
+                responseDTO.setMessage("No Employee Available For this empID");
+                responseDTO.setContent(null);
+                return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            responseDTO.setCode(VarList.RSP_ERROR);
+            responseDTO.setMessage(e.getMessage());
+            responseDTO.setContent(e);
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
 }

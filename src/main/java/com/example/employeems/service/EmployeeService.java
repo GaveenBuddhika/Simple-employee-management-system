@@ -59,9 +59,9 @@ public class EmployeeService {
 
         if (employeeRepo.existsById(emID)) {
 
-          employeeRepo.findById((emID)).orElse(null);
+          Employee employee = employeeRepo.findById(emID).orElse(null);
 
-          return modelMapper.map(employeeRepo,EmployeeDTO.class);
+          return modelMapper.map(employee,EmployeeDTO.class);
 
         } else {
          return  null;
@@ -69,6 +69,15 @@ public class EmployeeService {
         }
 
 
+    }
+
+    public String deleteEmployee(int emID){
+        if (employeeRepo.existsById(emID)){
+            employeeRepo.deleteById(emID);
+            return VarList.RSP_SUCCESS;
+        }else {
+            return VarList.RSP_NO_DATA_FOUND;
+        }
     }
 }
 
