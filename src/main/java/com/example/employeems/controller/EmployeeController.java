@@ -87,4 +87,56 @@ public class EmployeeController {
         }
 
     }
+
+
+
+    @GetMapping(value = "/getAllEmployees")
+
+    public ResponseEntity getAllEmployee() {
+        try {
+
+           List<EmployeeDTO> employeeDTOList= employeeService.getAllEmployee();
+            responseDTO.setCode(VarList.RSP_SUCCESS);
+            responseDTO.setMessage("Success");
+            responseDTO.setContent(employeeDTOList);
+            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+
+
+        } catch (Exception ex) {
+            responseDTO.setCode(VarList.RSP_ERROR);
+            responseDTO.setMessage(ex.getMessage());
+            responseDTO.setContent(null);
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }
+
+    }
+
+    @GetMapping("/searchEmployee/{emID}")
+    public ResponseEntity searchEmployee(@PathVariable int emID){
+
+        try {
+            EmployeeDTO employeeDTO = employeeService.searchEmployee(emID);
+            if (employeeDTO !=null) {
+                responseDTO.setCode(VarList.RSP_SUCCESS);
+                responseDTO.setMessage("Success");
+                responseDTO.setContent(employeeDTO);
+                return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+            } else {
+                responseDTO.setCode(VarList.RSP_NO_DATA_FOUND);
+                responseDTO.setMessage("No Employee Available For this empID");
+                responseDTO.setContent(null);
+                return new ResponseEntity(responseDTO, HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            responseDTO.setCode(VarList.RSP_ERROR);
+            responseDTO.setMessage(e.getMessage());
+            responseDTO.setContent(e);
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+
+
+
+    }
 }
