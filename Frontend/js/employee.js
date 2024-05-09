@@ -14,12 +14,14 @@ function saveEmployee(){
         data:JSON.stringify({
             "emID":"",
             "emName":name,
-            "empAdress":address,
+            "emAdress":address,
             "emNum":number
+
         }),
         success: function (data) {
             alert("saved")
             getAllEmployees()
+
         },
         error: function (xhr, exception) {
             alert("Error")
@@ -36,7 +38,7 @@ function updateEmployee(){
     $.ajax({
         method:"PUT",
         contentType:"application/json",
-        url:"http://localhost:8080/api/v1/employee/updateEmployee",
+        url:"http://localhost:8080/api/v1/employee/updateEmployee/{emID}",
         async:true,
         data:JSON.stringify({
             "emID":emID,
@@ -88,7 +90,7 @@ function getAllEmployees(){
 
                     var row=`<tr><td>${emID}</td><td>${name}</td><td>${address}</td><td>${number}</td></tr>`;
                     $('#empTable').append(row);
-                }
+                    }
             }
         },
         error: function (xhr, exception) {
