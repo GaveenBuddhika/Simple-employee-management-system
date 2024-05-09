@@ -57,7 +57,7 @@ public class EmployeeController {
 
 
 
-    @PutMapping(value = "/updateEmployee")
+    @PutMapping(value = "/updateEmployee/{emID}")
     public ResponseEntity updateEmployee(@RequestBody EmployeeDTO employeeDTO) {
         try {
             String res = employeeService.updateEmployee(employeeDTO);
