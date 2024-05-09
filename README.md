@@ -27,9 +27,10 @@ Exception Handling: Gracefully manage potential errors during data operations.
   ```bash
   https://maven.apache.org/download.cgi
   ```
-- MySQL ```bash
+- MySQL
+   ```bash
   https://www.mysql.com/
-  ```database server
+  ```
 - Code editor or IDE (e.g., IntelliJ IDEA)
 
 
