@@ -38,7 +38,7 @@ Exception Handling: Gracefully manage potential errors during data operations.
 - Bash
 - git clone
   ```bash
-  https://github.com/<GaveenBuddhika>/Simple-employee-management-system.git
+  https://github.com/GaveenBuddhika/Simple-employee-management-system.git
    ```
 - Use code with caution.
 
