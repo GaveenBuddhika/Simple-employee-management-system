@@ -1,4 +1,4 @@
-Employee Management System
+## Employee Management System
 
 ## This project implements a simple employee management system using the following technologies:
 
@@ -20,17 +20,25 @@ Exception Handling: Gracefully manage potential errors during data operations.
 
 ## Prerequisites:
 - Java Development Kit (JDK) 11 or later
-  ```bash https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html ```
+  ```bash
+  https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+   ```
 - Maven
-  ```bash https://maven.apache.org/download.cgi ```
-- MySQL ```bash https://www.mysql.com/ ```database server
+  ```bash
+  https://maven.apache.org/download.cgi
+  ```
+- MySQL ```bash
+  https://www.mysql.com/
+  ```database server
 - Code editor or IDE (e.g., IntelliJ IDEA)
 
 
 ## Clone the Repository:
 - Bash
 - git clone
-  ```bash https://github.com/<GaveenBuddhika>/Simple-employee-management-system.git ```
+  ```bash
+  https://github.com/<GaveenBuddhika>/Simple-employee-management-system.git
+   ```
 - Use code with caution.
 
 
