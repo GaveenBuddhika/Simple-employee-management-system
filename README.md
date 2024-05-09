@@ -1,12 +1,12 @@
 Employee Management System
 
-##This project implements a simple employee management system using the following technologies:
+## This project implements a simple employee management system using the following technologies:
 
 Backend: Spring Boot
 Frontend: HTML, JavaScript, Bootstrap
 
 
-##Features
+## Features
 Add Employee: Create new employee profiles with essential details.
 Edit Employee: Modify existing employee information.
 Search Employee: Find employees by criteria (e.g., name, ID).
