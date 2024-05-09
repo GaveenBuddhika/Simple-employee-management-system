@@ -77,6 +77,10 @@ Exception Handling: Gracefully manage potential errors during data operations.
 
 ## Feel free to fork the repository, make improvements, and submit pull requests. We welcome contributions to enhance this employee management system.
 
+## Screenshots
+
+![App Screenshot](https://drive.google.com/file/d/1nsQuYGxLjioTkZz5l15GC8aNnLsEQjAP/view?usp=drive_link)
+
 
 ## Disclaimer
 - This README provides a general structure. You'll need to fill in the specific details for your project, such as setting up the frontend development environment and integrating the frontend with the Spring Boot APIs.
