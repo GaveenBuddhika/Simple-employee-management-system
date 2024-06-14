@@ -79,7 +79,8 @@ Exception Handling: Gracefully manage potential errors during data operations.
 
 ## Screenshots
 
-![Screenshot 2024-05-09 205528](https://github.com/GaveenBuddhika/Simple-employee-management-system/assets/118238999/7192d0a4-e99f-4c01-9a7a-a6331e9c4ce7)
+![project1](https://github.com/GaveenBuddhika/Simple-employee-management-system/assets/118238999/15f7b568-971d-4862-a4f4-5b9057a3b3cc)
+
 
 
 ## Disclaimer
